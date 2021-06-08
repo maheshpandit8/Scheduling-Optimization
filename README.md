@@ -1,2 +1,41 @@
 # Scheduling_Optimization
 Optimization problem solved using Gurobi
+
+## Classroom Scheduling Optimization
+
+
+1.	Problem Description
+Shannon Faris is the Assistant Dean of Institutional Research and Academic Administration at the USC Marshall School of Business. She and her colleague Hal Warning from the Marshall Office of Finance and Administration are in charge of coordinating classroom scheduling for the entire business school, which has 7 departments, 22 academic programs, and enrollment of around 5000 undergraduate students and 1000 graduate students. Since taking charge of the scheduling process in 2016, they have been implementing a series of reforms on course scheduling to improve efficiency and transparency. While they have already conducted exten- sive analysis on the current schedules and scheduling process, they are innovative managers who are open to explore the potential benefits of advanced business analytics techniques.
+Your team has been hired as elite consultants to investigate the possibility of applying optimization to improve the current system and to rigorously quantify the potential gains. How you go about this task is open-ended: you can be creative in what part of the current
+system to introduce optimization, how to measure success, and how to implement the opti- mization. But you must be able to justify these choices and defend your assumptions. You will present your findings to Shannon and her team, as well as document your methodology and results in a report that will be scrutinized over by both senior administrators and data analysts.
+
+1.1	Status Quo
+The scheduling of courses and classrooms at USC Marshall begins almost one year before the semester begins. For courses in the fall 2018 semester, Shannon and her team would allocate to each department coordinator a set of classroom-time slots at the beginning of fall 2017. For spring 2019, the initial allocation is made at the beginning of spring 2018. These slots are based on the historical allocation for courses from that department, as well as on any special requests from the department coordinators. Each slot indicates a classroom as well as a time period in the week. (i.e. JKP 102 on Mondays at 2-4pm.)
+Marshall has seven departments, each with its own scheduling coordinator, who is typically the head administrator for that department. The seven departments along with their com- monly used abbreviations are as follows: Business Communication (BUCO), Data Sciences
+ 
+and Operations (DSO), Finance and Business Economics (FBE), Leventhal School of Account- ing (ACCT), Management and Organization (MOR), Marketing (MKT), and Lloyd Greif Center for Entrepreneurial Studies (BAEP).
+Upon receiving the initial allocation of time slots from Shannon’s team, each department co- ordinator has a few months to populate the slots with courses, working in cooperation with the chair of the department, who assigns teaching duties to individual professors. For concrete- ness, we refer to this as Phase I of the classroom scheduling process. The current assignment of courses is largely based on historical schedules. However, changes must be made when there are new courses or new sections of existing courses that need to be allocated. Classrooms also have different sizes and capabilities, and the allocation should satisfy the particular needs of each course. During the scheduling process, individual professors may also reach out to the department coordinator to indicate preferences for teaching times. However, this is done at an ad-hoc basis and there is currently no systematic way of eliciting and accommodating faculty preferences.
+After Phase I ends, any unused slots become open for any department to use. Over the next few months before the semester begins, the department coordinators work with Shannon and her team to schedule the remaining courses. We refer to this as Phase II of the scheduling process. Preferences for classrooms and times become increasingly difficult to accommodate during Phase II as previously available slots become taken. At this time, Shannon’s team may need to find potential swaps of course times in order to find a feasible allocation that satisfies all courses. The schedule must be finalized before the student course selection process begins. Currently, a significant fraction of courses and sections are not scheduled by the end of Phase I. This implies a lot of last minute scrambling and headaches for certain departments to schedule the remaining courses. In rare cases, the classroom may still be unassigned at the
+time students choose classes.
+Since taking ownership of the scheduling process, they have been trying to increase the transparency of the communications with department coordinators, increase the percentage of courses that are scheduled by the end of Phase 1, and apply evidence-based decision mak- ing. They are constantly analyzing the historical and current schedules to identify possible improvements.
+
+1.2	Desirable Goals
+Ideally, a course scheduling system should:
+
+•	Efficiently utilize the available space to schedule all courses and output a feasible sched- ule on time, well before registration starts. This is projected to become more difficult in the future as demand for Marshall courses is expected to rise, but the school does not have the resources to build additional classrooms due to land restrictions. If efficiency does not rise through optimization, then Marshall may be forced to increasingly sched- ule classes during early morning or late evening hours, which may be unpopular to the majority of students and faculty.
+•	Satisfy the preferences and needs of students as much as possible, so that they are able to successfully schedule all their required courses as well as the electives that they most desire. Students also have preferences for certain time of day that should be satisfied as much as possible.
+•	Satisfy the preferences of faculty as much as possible. For example, most faculty prefer to teach everything on the same day, so they do not have to teach every day of the week. Moreover, many faculty prefer not to teach in the evenings, although some actually prefer evenings to avoid traffic. It’s best to match the times with faculty preferences, so as to improve the work environment for faculty and help Marshall to recruit and retain the best.
+ 
+•	Be transparent and fair in how it satisfies student and faculty preferences, so that certain groups are not discriminated against.
+•	Limit the administrative effort needed by Shannon’s team and by department coordina- tors, who also have other roles to fill.
+•	Adapt to the changing needs of the students and faculty, as the set of courses and the demand for each course changes from one year to the next, and there may be changes in the composition of students as well as turnover among faculty.
+
+1.3	Institutional Constraints
+The department coordinators are currently overtaxed in general, so any recommendation that requires additional time and effort from them has a low chance of being adopted. On the contrast, anything that would save them significant time and effort is appealing.
+Similarly, a recommendation that can be easily incorporated into the current work flow has a much better chance of being implemented than a recommendation that requires large changes. For example, it is conceivable that Shannon’s team may adopt a decision support tool that rec- ommends a schedule that they can tweak; but it’s hard to imagine that they would accept a black-box system that allows no human feedback and simply outputs an “optimized” sched- ule.
+While the school leadership is open to innovative ideas that improve the status quo, it also wishes to minimize the risk of disrupting normal operations. As a result, a series of gradual improvements is easier to accept than a sudden large-scale revamp. Furthermore, it is impor- tant to be able to quantify the potential for improvement in a rigorous way, so as to make sure that any changes will be worth the efforts. The school will not make any changes outright without convincing evidence of its benefit.
+
+
+## Documentation
+
+The documentation of the optimization tool and the input data area available in the file titled "Documentation"
